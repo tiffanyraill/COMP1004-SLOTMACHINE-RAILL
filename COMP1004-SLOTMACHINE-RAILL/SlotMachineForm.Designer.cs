@@ -56,28 +56,31 @@
             // 
             // leftPictureBox
             // 
-            this.leftPictureBox.BackColor = System.Drawing.Color.White;
+            this.leftPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.leftPictureBox.Location = new System.Drawing.Point(188, 291);
             this.leftPictureBox.Name = "leftPictureBox";
             this.leftPictureBox.Size = new System.Drawing.Size(154, 130);
+            this.leftPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.leftPictureBox.TabIndex = 1;
             this.leftPictureBox.TabStop = false;
             // 
             // middlePictureBox
             // 
-            this.middlePictureBox.BackColor = System.Drawing.Color.White;
+            this.middlePictureBox.BackColor = System.Drawing.Color.Transparent;
             this.middlePictureBox.Location = new System.Drawing.Point(373, 291);
             this.middlePictureBox.Name = "middlePictureBox";
             this.middlePictureBox.Size = new System.Drawing.Size(154, 130);
+            this.middlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.middlePictureBox.TabIndex = 2;
             this.middlePictureBox.TabStop = false;
             // 
             // rightPictureBox
             // 
-            this.rightPictureBox.BackColor = System.Drawing.Color.White;
+            this.rightPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.rightPictureBox.Location = new System.Drawing.Point(559, 291);
             this.rightPictureBox.Name = "rightPictureBox";
             this.rightPictureBox.Size = new System.Drawing.Size(154, 130);
+            this.rightPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rightPictureBox.TabIndex = 3;
             this.rightPictureBox.TabStop = false;
             // 
@@ -91,6 +94,7 @@
             this.resetButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.resetButton.TabIndex = 4;
             this.resetButton.TabStop = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // exitButton
             // 
@@ -120,7 +124,6 @@
             this.Name = "SlotMachineForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Slot Machine";
-         //   this.Load += new System.EventHandler(this.SlotMachineForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.startButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.middlePictureBox)).EndInit();
