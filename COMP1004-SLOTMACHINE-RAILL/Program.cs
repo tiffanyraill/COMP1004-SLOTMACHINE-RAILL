@@ -16,7 +16,7 @@ namespace COMP1004_SLOTMACHINE_RAILL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SlotMachineForm());
         }
     }
 }
