@@ -63,6 +63,46 @@ namespace COMP1004_SLOTMACHINE_RAILL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bet1 {
+            get {
+                object obj = ResourceManager.GetObject("bet1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bet10 {
+            get {
+                object obj = ResourceManager.GetObject("bet10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bet25 {
+            get {
+                object obj = ResourceManager.GetObject("bet25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bet5 {
+            get {
+                object obj = ResourceManager.GetObject("bet5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap club {
             get {
                 object obj = ResourceManager.GetObject("club", resourceCulture);
@@ -106,6 +146,16 @@ namespace COMP1004_SLOTMACHINE_RAILL.Properties {
         internal static System.Drawing.Bitmap heart {
             get {
                 object obj = ResourceManager.GetObject("heart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jokerblack {
+            get {
+                object obj = ResourceManager.GetObject("jokerblack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
