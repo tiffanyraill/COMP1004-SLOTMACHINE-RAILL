@@ -337,6 +337,10 @@ namespace COMP1004_SLOTMACHINE_RAILL
                 leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
                 leftPictureBox.BackColor = Color.White;
             }
+            else if (spinResult[0] == "Blank")
+            {
+                leftPictureBox.BackColor = Color.White;
+            }
             //middle reel
             if (spinResult[1] == "Hearts")
             {
@@ -363,6 +367,10 @@ namespace COMP1004_SLOTMACHINE_RAILL
                 middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
                 middlePictureBox.BackColor = Color.White;
             }
+            else if (spinResult[1] == "Blank")
+            {
+                middlePictureBox.BackColor = Color.White;
+            }
             //right reel
             if (spinResult[2] == "Hearts")
             {
@@ -387,6 +395,10 @@ namespace COMP1004_SLOTMACHINE_RAILL
             else if (spinResult[2] == "Jokers")
             {
                 rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
+                rightPictureBox.BackColor = Color.White;
+            }
+            else if (spinResult[2] == "Blank")
+            {
                 rightPictureBox.BackColor = Color.White;
             }
         }
