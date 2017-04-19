@@ -41,6 +41,7 @@
             this.bet5PictureBox = new System.Windows.Forms.PictureBox();
             this.bet10PictureBox = new System.Windows.Forms.PictureBox();
             this.bet25PictureBox = new System.Windows.Forms.PictureBox();
+            this.jackpotLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.startButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.middlePictureBox)).BeginInit();
@@ -105,6 +106,7 @@
             this.resetButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.resetButton.TabIndex = 4;
             this.resetButton.TabStop = false;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // exitButton
             // 
@@ -121,44 +123,47 @@
             // BetTextBox
             // 
             this.BetTextBox.BackColor = System.Drawing.Color.Black;
-            this.BetTextBox.Font = new System.Drawing.Font("Harlow Solid Italic", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BetTextBox.Font = new System.Drawing.Font("Broadway", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BetTextBox.ForeColor = System.Drawing.Color.Red;
-            this.BetTextBox.Location = new System.Drawing.Point(384, 563);
+            this.BetTextBox.Location = new System.Drawing.Point(199, 563);
             this.BetTextBox.MaxLength = 6;
             this.BetTextBox.Name = "BetTextBox";
             this.BetTextBox.ReadOnly = true;
-            this.BetTextBox.Size = new System.Drawing.Size(143, 49);
+            this.BetTextBox.Size = new System.Drawing.Size(143, 34);
             this.BetTextBox.TabIndex = 6;
+            this.BetTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // WinLossTextBox
             // 
             this.WinLossTextBox.BackColor = System.Drawing.Color.Black;
-            this.WinLossTextBox.Font = new System.Drawing.Font("Harlow Solid Italic", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WinLossTextBox.Font = new System.Drawing.Font("Broadway", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WinLossTextBox.ForeColor = System.Drawing.Color.Red;
-            this.WinLossTextBox.Location = new System.Drawing.Point(199, 563);
+            this.WinLossTextBox.Location = new System.Drawing.Point(384, 563);
             this.WinLossTextBox.MaxLength = 100;
             this.WinLossTextBox.Name = "WinLossTextBox";
             this.WinLossTextBox.ReadOnly = true;
-            this.WinLossTextBox.Size = new System.Drawing.Size(143, 49);
+            this.WinLossTextBox.Size = new System.Drawing.Size(143, 34);
             this.WinLossTextBox.TabIndex = 7;
+            this.WinLossTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PayoutTextBox
             // 
             this.PayoutTextBox.BackColor = System.Drawing.Color.Black;
-            this.PayoutTextBox.Font = new System.Drawing.Font("Harlow Solid Italic", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayoutTextBox.Font = new System.Drawing.Font("Broadway", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PayoutTextBox.ForeColor = System.Drawing.Color.Red;
             this.PayoutTextBox.Location = new System.Drawing.Point(559, 563);
             this.PayoutTextBox.MaxLength = 6;
             this.PayoutTextBox.Name = "PayoutTextBox";
             this.PayoutTextBox.ReadOnly = true;
-            this.PayoutTextBox.Size = new System.Drawing.Size(143, 49);
+            this.PayoutTextBox.Size = new System.Drawing.Size(143, 34);
             this.PayoutTextBox.TabIndex = 8;
+            this.PayoutTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bet1PictureBox
             // 
-            this.bet1PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.bet1PictureBox.BackColor = System.Drawing.Color.Black;
             this.bet1PictureBox.Image = global::COMP1004_SLOTMACHINE_RAILL.Properties.Resources.bet1;
-            this.bet1PictureBox.Location = new System.Drawing.Point(244, 631);
+            this.bet1PictureBox.Location = new System.Drawing.Point(244, 709);
             this.bet1PictureBox.Name = "bet1PictureBox";
             this.bet1PictureBox.Size = new System.Drawing.Size(98, 86);
             this.bet1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,9 +173,9 @@
             // 
             // bet5PictureBox
             // 
-            this.bet5PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.bet5PictureBox.BackColor = System.Drawing.Color.Black;
             this.bet5PictureBox.Image = global::COMP1004_SLOTMACHINE_RAILL.Properties.Resources.bet5;
-            this.bet5PictureBox.Location = new System.Drawing.Point(352, 631);
+            this.bet5PictureBox.Location = new System.Drawing.Point(352, 709);
             this.bet5PictureBox.Name = "bet5PictureBox";
             this.bet5PictureBox.Size = new System.Drawing.Size(98, 86);
             this.bet5PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -180,9 +185,9 @@
             // 
             // bet10PictureBox
             // 
-            this.bet10PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.bet10PictureBox.BackColor = System.Drawing.Color.Black;
             this.bet10PictureBox.Image = global::COMP1004_SLOTMACHINE_RAILL.Properties.Resources.bet10;
-            this.bet10PictureBox.Location = new System.Drawing.Point(456, 631);
+            this.bet10PictureBox.Location = new System.Drawing.Point(456, 709);
             this.bet10PictureBox.Name = "bet10PictureBox";
             this.bet10PictureBox.Size = new System.Drawing.Size(98, 86);
             this.bet10PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,15 +197,26 @@
             // 
             // bet25PictureBox
             // 
-            this.bet25PictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.bet25PictureBox.BackColor = System.Drawing.Color.Black;
             this.bet25PictureBox.Image = global::COMP1004_SLOTMACHINE_RAILL.Properties.Resources.bet25;
-            this.bet25PictureBox.Location = new System.Drawing.Point(559, 631);
+            this.bet25PictureBox.Location = new System.Drawing.Point(569, 709);
             this.bet25PictureBox.Name = "bet25PictureBox";
-            this.bet25PictureBox.Size = new System.Drawing.Size(98, 86);
+            this.bet25PictureBox.Size = new System.Drawing.Size(99, 86);
             this.bet25PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bet25PictureBox.TabIndex = 12;
             this.bet25PictureBox.TabStop = false;
             this.bet25PictureBox.Click += new System.EventHandler(this.bet25PictureBox_Click);
+            // 
+            // jackpotLabel
+            // 
+            this.jackpotLabel.AutoSize = true;
+            this.jackpotLabel.BackColor = System.Drawing.Color.Black;
+            this.jackpotLabel.Font = new System.Drawing.Font("Broadway", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jackpotLabel.ForeColor = System.Drawing.Color.Red;
+            this.jackpotLabel.Location = new System.Drawing.Point(363, 623);
+            this.jackpotLabel.Name = "jackpotLabel";
+            this.jackpotLabel.Size = new System.Drawing.Size(0, 55);
+            this.jackpotLabel.TabIndex = 13;
             // 
             // SlotMachineForm
             // 
@@ -208,6 +224,7 @@
             this.BackgroundImage = global::COMP1004_SLOTMACHINE_RAILL.Properties.Resources.slot_machine_clip_art;
             this.ClientSize = new System.Drawing.Size(944, 795);
             this.ControlBox = false;
+            this.Controls.Add(this.jackpotLabel);
             this.Controls.Add(this.bet25PictureBox);
             this.Controls.Add(this.bet10PictureBox);
             this.Controls.Add(this.bet5PictureBox);
@@ -255,6 +272,7 @@
         private System.Windows.Forms.PictureBox bet5PictureBox;
         private System.Windows.Forms.PictureBox bet10PictureBox;
         private System.Windows.Forms.PictureBox bet25PictureBox;
+        private System.Windows.Forms.Label jackpotLabel;
     }
 }
 

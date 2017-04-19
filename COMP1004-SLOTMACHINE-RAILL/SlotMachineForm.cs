@@ -59,7 +59,7 @@ namespace COMP1004_SLOTMACHINE_RAILL
         }
 
         /* Utility function to reset all fruit tallies*/
-        private void resetFruitTally()
+        private void resetCardTally()
         {
             hearts = 0;
             diamonds = 0;
@@ -108,8 +108,7 @@ namespace COMP1004_SLOTMACHINE_RAILL
         private void showWinMessage()
         {
             playerMoney += winnings;
-            //message boxes have been replaced with labels
-            WinLossTextBox.Text = "WINNER!";
+            WinLossTextBox.Text = "You Win!";
             PayoutTextBox.Text = "" + winnings;
             resetCardTally();
             checkJackPot();
@@ -118,8 +117,8 @@ namespace COMP1004_SLOTMACHINE_RAILL
         /* Utility function to show a loss message and reduce player money */
         private void showLossMessage()
         {
-            //message boxes have been replaced with labels
-            WinLossTextBox.Text = "TRY AGAIN!";
+            
+            WinLossTextBox.Text = "Play Again";
             PayoutTextBox.Text = "";
             playerMoney -= playerBet;
             resetCardTally();
@@ -145,7 +144,7 @@ namespace COMP1004_SLOTMACHINE_RAILL
 
                 if (checkRange(outCome[spin], 1, 23))
                 {  // 41.2% probability
-                    betLine[spin] = "blank";
+                    betLine[spin] = "Blank";
                     blanks++;
                 }
                 else if (checkRange(outCome[spin], 24, 35))
@@ -245,9 +244,9 @@ namespace COMP1004_SLOTMACHINE_RAILL
         private void startButton_Click(object sender, EventArgs e)
         {
 
-            leftPictureBox.BackColor = Color.White;
-            middlePictureBox.BackColor = Color.White;
-            rightPictureBox.BackColor = Color.White;
+          //  leftPictureBox.BackColor = Color.White;
+            //middlePictureBox.BackColor = Color.White;
+            //rightPictureBox.BackColor = Color.White;
 
             playerBet = 10; // default bet amount
 
@@ -271,7 +270,8 @@ namespace COMP1004_SLOTMACHINE_RAILL
             {
                 spinResult = Reels();
                 cards = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
-                MessageBox.Show(cards);
+                updatePictureBoxes();
+                // MessageBox.Show(cards);
                 determineWinnings();
                 turn++;
                 showPlayerStats();
@@ -308,116 +308,93 @@ namespace COMP1004_SLOTMACHINE_RAILL
 
           /* This function will update the reels based on the results */
           private void updatePictureBoxes()
-             {
+          {
             //left reel
-            if (spinResult[0] == "hearts")
+            if (spinResult[0] == "Hearts")
             {
-                leftPictureBox.Image = Properties.Resources.heart;
+                leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.heart;
             }
-            else if (spinResult[0] == "diamonds")
+            else if (spinResult[0] == "Diamonds")
             {
-                leftPictureBox.Image = Properties.Resources.diamond;
+                leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.diamond;
             }
-            else if (spinResult[0] == "clubs")
+            else if (spinResult[0] == "Clubs")
             {
-                leftPictureBox.Image = Properties.Resources.club;
+                leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.club;
             }
-            else if (spinResult[0] == "spades")
+            else if (spinResult[0] == "Spades")
             {
-                leftPictureBox.Image = Properties.Resources.spade;
+                leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.spade;
             }
-            else if (spinResult[0] == "jokers")
+            else if (spinResult[0] == "Jokers")
             {
-                leftPictureBox.Image = Properties.Resources.jokerblack;
+                leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
             }
             //middle reel
-            if (spinResult[1] == "hearts")
+            if (spinResult[1] == "Hearts")
             {
-                middlePictureBox.Image = Properties.Resources.heart;
+                middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.heart;
             }
-            else if (spinResult[1] == "diamonds")
+            else if (spinResult[1] == "Diamonds")
             {
-                middlePictureBox.Image = Properties.Resources.diamond;
+                middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.diamond;
             }
-            else if (spinResult[1] == "clubs")
+            else if (spinResult[1] == "Clubs")
             {
-                middlePictureBox.Image = Properties.Resources.club;
+                middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.club;
             }
-            else if (spinResult[1] == "spades")
+            else if (spinResult[1] == "Spades")
             {
-                middlePictureBox.Image = Properties.Resources.spade;
+                middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.spade;
             }
-            else if (spinResult[1] == "jokers")
+            else if (spinResult[1] == "Jokers")
             {
-                middlePictureBox.Image = Properties.Resources.jokerblack;
+                middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
             }
-
-        }
-            for (int mSpin = 0; mSpin < 1; mSpin++)
+            //right reel
+            if (spinResult[2] == "Hearts")
             {
-                mSpin = this.random.Next(3) + 1;
-
-                if (mSpin == 1)
-                {
-                    middlePictureBox.Image = Properties.Resources.heart;
-                }
-                else if (mSpin == 2)
-                {
-                    middlePictureBox.Image = Properties.Resources.spade;
-                }
-                else if (mSpin == 3)
-                {
-                    middlePictureBox.Image = Properties.Resources.diamond;
-                }
-                else if (mSpin == 4)
-                {
-                    middlePictureBox.Image = Properties.Resources.club;
-                }
+                rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.heart;
             }
-            for (int rSpin = 0; rSpin < 1; rSpin++)
+            else if (spinResult[2] == "Diamonds")
             {
-                rSpin = this.random.Next(3) + 1;
-
-                if (rSpin == 1)
-                {
-                   rightPictureBox.Image = Properties.Resources.heart;
-
-                }
-                else if (rSpin == 2)
-                {
-                     rightPictureBox.Image = Properties.Resources.spade;
-
-                }
-                else if (rSpin == 3)
-                {
-                    rightPictureBox.Image = Properties.Resources.diamond;
-                }
-                else if (rSpin == 4)
-                {
-                    rightPictureBox.Image = Properties.Resources.club;
-                }
+                rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.diamond;
             }
-
+            else if (spinResult[2] == "Clubs")
+            {
+                rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.club;
+            }
+            else if (spinResult[2] == "Spades")
+            {
+                rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.spade;
+            }
+            else if (spinResult[2] == "Jokers")
+            {
+                rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
+            }
         }
 
         /*
-         * This will update all the labels in the form, as well as check if the spin button should be disabled
+         *  Update labels & check if the spin button should be disabled
          */
         private void updateLabels()
         {
-            MoneyLabel.Text = "" + playerMoney;
-            BetLabel.Text = "" + playerBet;
-            JackpotLabel.Text = "Jackpot: " + jackpot;
+            PayoutTextBox.Text = "" + playerMoney;
+            BetTextBox.Text = "" + playerBet;
+            jackpotLabel.Text = "Jackpot: " + jackpot;
             if (playerBet == 0)
             {
-                SpinPictureBox.Image = SlotMachine.Properties.Resources.spin_disabled;
+                startButton.Image = Properties.Resources.greenGo;
+                startButton.Enabled = false;
+                startButton.Visible = false;
             }
             else if (playerBet > 0)
             {
-                SpinPictureBox.Image = SlotMachine.Properties.Resources.spin;
+                startButton.Image = Properties.Resources.greenGo;
+                startButton.Enabled = true;
+                startButton.Visible = true;
             }
         }
-
 
         private void resetButton_Click(object sender, EventArgs e)
         {
