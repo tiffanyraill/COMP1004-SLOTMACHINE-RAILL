@@ -69,9 +69,10 @@
             // leftPictureBox
             // 
             this.leftPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.leftPictureBox.Location = new System.Drawing.Point(188, 291);
+            this.leftPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.leftPictureBox.Location = new System.Drawing.Point(170, 265);
             this.leftPictureBox.Name = "leftPictureBox";
-            this.leftPictureBox.Size = new System.Drawing.Size(154, 130);
+            this.leftPictureBox.Size = new System.Drawing.Size(183, 170);
             this.leftPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.leftPictureBox.TabIndex = 1;
             this.leftPictureBox.TabStop = false;
@@ -79,9 +80,9 @@
             // middlePictureBox
             // 
             this.middlePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.middlePictureBox.Location = new System.Drawing.Point(373, 291);
+            this.middlePictureBox.Location = new System.Drawing.Point(359, 265);
             this.middlePictureBox.Name = "middlePictureBox";
-            this.middlePictureBox.Size = new System.Drawing.Size(154, 130);
+            this.middlePictureBox.Size = new System.Drawing.Size(183, 170);
             this.middlePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.middlePictureBox.TabIndex = 2;
             this.middlePictureBox.TabStop = false;
@@ -89,9 +90,9 @@
             // rightPictureBox
             // 
             this.rightPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.rightPictureBox.Location = new System.Drawing.Point(559, 291);
+            this.rightPictureBox.Location = new System.Drawing.Point(548, 265);
             this.rightPictureBox.Name = "rightPictureBox";
-            this.rightPictureBox.Size = new System.Drawing.Size(154, 130);
+            this.rightPictureBox.Size = new System.Drawing.Size(183, 170);
             this.rightPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rightPictureBox.TabIndex = 3;
             this.rightPictureBox.TabStop = false;
@@ -213,10 +214,11 @@
             this.jackpotLabel.BackColor = System.Drawing.Color.Black;
             this.jackpotLabel.Font = new System.Drawing.Font("Broadway", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jackpotLabel.ForeColor = System.Drawing.Color.Red;
-            this.jackpotLabel.Location = new System.Drawing.Point(363, 623);
+            this.jackpotLabel.Location = new System.Drawing.Point(243, 623);
             this.jackpotLabel.Name = "jackpotLabel";
             this.jackpotLabel.Size = new System.Drawing.Size(0, 55);
             this.jackpotLabel.TabIndex = 13;
+            this.jackpotLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SlotMachineForm
             // 

@@ -37,10 +37,6 @@ namespace COMP1004_SLOTMACHINE_RAILL
             updateLabels();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         /* Utility function to show Player Stats */
         private void showPlayerStats()
@@ -82,9 +78,12 @@ namespace COMP1004_SLOTMACHINE_RAILL
             winRatio = 0.0f;
             WinLossTextBox.Text = "";
             PayoutTextBox.Text = "";
-            leftPictureBox.BackColor = Color.Transparent;
-            middlePictureBox.BackColor = Color.Transparent;
-            rightPictureBox.BackColor = Color.Transparent;
+          //  leftPictureBox.BackColor = Color.Transparent;
+           // middlePictureBox.BackColor = Color.Transparent;
+            //rightPictureBox.BackColor = Color.Transparent;
+            //   leftPictureBox.BackColor = Color.White;
+            // middlePictureBox.BackColor = Color.White;
+            //  rightPictureBox.BackColor = Color.White;
 
         }
 
@@ -244,9 +243,9 @@ namespace COMP1004_SLOTMACHINE_RAILL
         private void startButton_Click(object sender, EventArgs e)
         {
 
-          //  leftPictureBox.BackColor = Color.White;
-            //middlePictureBox.BackColor = Color.White;
-            //rightPictureBox.BackColor = Color.White;
+            leftPictureBox.Visible = true;
+            middlePictureBox.Visible = true;
+            rightPictureBox.Visible = true;
 
             playerBet = 10; // default bet amount
 
@@ -271,10 +270,9 @@ namespace COMP1004_SLOTMACHINE_RAILL
                 spinResult = Reels();
                 cards = spinResult[0] + " - " + spinResult[1] + " - " + spinResult[2];
                 updatePictureBoxes();
-                // MessageBox.Show(cards);
                 determineWinnings();
                 turn++;
-                showPlayerStats();
+                
             }
             else
             {
@@ -287,6 +285,9 @@ namespace COMP1004_SLOTMACHINE_RAILL
         {
             playerBet = 1;
             updateLabels();
+            leftPictureBox.BackColor = Color.White;
+            middlePictureBox.BackColor = Color.White;
+            rightPictureBox.BackColor = Color.White;
         }
         private void bet5PictureBox_Click(object sender, EventArgs e)
         {
@@ -309,68 +310,84 @@ namespace COMP1004_SLOTMACHINE_RAILL
           /* This function will update the reels based on the results */
           private void updatePictureBoxes()
           {
+          
             //left reel
             if (spinResult[0] == "Hearts")
             {
                 leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.heart;
+                leftPictureBox.BackColor = Color.White;
             }
             else if (spinResult[0] == "Diamonds")
             {
                 leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.diamond;
+                leftPictureBox.BackColor = Color.White;
             }
             else if (spinResult[0] == "Clubs")
             {
                 leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.club;
+                leftPictureBox.BackColor = Color.White;
             }
             else if (spinResult[0] == "Spades")
             {
                 leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.spade;
+                leftPictureBox.BackColor = Color.White;
             }
             else if (spinResult[0] == "Jokers")
             {
                 leftPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
+                leftPictureBox.BackColor = Color.White;
             }
             //middle reel
             if (spinResult[1] == "Hearts")
             {
                 middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.heart;
+                middlePictureBox.BackColor = Color.White;
             }
             else if (spinResult[1] == "Diamonds")
             {
                 middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.diamond;
+                middlePictureBox.BackColor = Color.White;
             }
             else if (spinResult[1] == "Clubs")
             {
                 middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.club;
+                middlePictureBox.BackColor = Color.White;
             }
             else if (spinResult[1] == "Spades")
             {
                 middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.spade;
+                middlePictureBox.BackColor = Color.White;
             }
             else if (spinResult[1] == "Jokers")
             {
                 middlePictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
+                middlePictureBox.BackColor = Color.White;
             }
             //right reel
             if (spinResult[2] == "Hearts")
             {
                 rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.heart;
+                rightPictureBox.BackColor = Color.White;
             }
             else if (spinResult[2] == "Diamonds")
             {
                 rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.diamond;
+                rightPictureBox.BackColor = Color.White;
             }
             else if (spinResult[2] == "Clubs")
             {
                 rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.club;
+                rightPictureBox.BackColor = Color.White;
             }
             else if (spinResult[2] == "Spades")
             {
                 rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.spade;
+                rightPictureBox.BackColor = Color.White;
             }
             else if (spinResult[2] == "Jokers")
             {
                 rightPictureBox.Image = COMP1004_SLOTMACHINE_RAILL.Properties.Resources.jokerblack;
+                rightPictureBox.BackColor = Color.White;
             }
         }
 
@@ -400,7 +417,16 @@ namespace COMP1004_SLOTMACHINE_RAILL
         {
             resetAll();
             updateLabels();
-           
+            leftPictureBox.Visible = false;
+            middlePictureBox.Visible = false;
+            rightPictureBox.Visible = false;
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            showPlayerStats();
+            Application.Exit();
         }
 
     }
